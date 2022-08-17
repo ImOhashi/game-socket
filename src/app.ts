@@ -6,7 +6,7 @@ class App {
   public app: express.Application = express();
 
   constructor() {
-    if (process.env.NODE_ENV === "development") config;
+    if (process.env.NODE_ENV === "development") config();
 
     this.middlewares();
   }
