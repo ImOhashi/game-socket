@@ -1,5 +1,5 @@
-import { Server } from "http";
 import { logger } from "cyber-logger";
+import { Server } from "http";
 
 import app from "./app";
 
