@@ -8,7 +8,7 @@
     "Bet4Arrio <emanuelsa-rv@hotmail.com> (https://www.linkedin.com/in/emanuel-silva-araujo-753ba71b2/)"
   ],
   "scripts": {
-    "dev": "nodemon src/server.ts"
+    "dev": "cross-env NODE_ENV=development nodemon src/server.ts"
   },
   "license": "MIT",
   "engines": {
@@ -27,6 +27,7 @@
     "@types/node": "^18.7.6",
     "@types/socket.io": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.25.2",
