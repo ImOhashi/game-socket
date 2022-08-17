@@ -7,6 +7,9 @@
     "ImOhashi <leonardoohashi.mkt@gmail.com> (https://www.linkedin.com/in/leonardo-fonseca-ohashi/)",
     "Bet4Arrio <emanuelsa-rv@hotmail.com> (https://www.linkedin.com/in/emanuel-silva-araujo-753ba71b2/)"
   ],
+  "scripts": {
+    "dev": "nodemon src/server.ts"
+  },
   "license": "MIT",
   "engines": {
     "npm": "You must run Yarn in this project",
