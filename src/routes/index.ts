@@ -15,8 +15,16 @@ class Routes {
       const details: IDetails = {
         version: process.env.npm_package_version,
         contributors: [
-          process.env.npm_package_contributors_0_name,
-          process.env.npm_package_contributors_1_name,
+          {
+            nickname: process.env.npm_package_contributors_0_name,
+            email: process.env.npm_package_contributors_0_email,
+            url: process.env.npm_package_contributors_0_url,
+          },
+          {
+            nickname: process.env.npm_package_contributors_1_name,
+            email: process.env.npm_package_contributors_1_email,
+            url: process.env.npm_package_contributors_1_url,
+          },
         ],
         repository_url: process.env.npm_package_repository_url,
       };
