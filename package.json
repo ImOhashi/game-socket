@@ -1,0 +1,34 @@
+{
+  "name": "game-socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ImOhashi/game-socket",
+  "contributors": [
+    "ImOhashi <leonardoohashi.mkt@gmail.com> (https://www.linkedin.com/in/leonardo-fonseca-ohashi/)",
+    "Bet4Arrio <emanuelsa-rv@hotmail.com> (https://www.linkedin.com/in/emanuel-silva-araujo-753ba71b2/)"
+  ],
+  "license": "MIT",
+  "engines": {
+    "npm": "You must run Yarn in this project",
+    "yarn": "1.22.x"
+  },
+  "dependencies": {
+    "cyber-logger": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.6",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.7.0",
+    "typescript": "*"
+  }
+}
