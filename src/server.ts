@@ -6,7 +6,7 @@ import app from "./app";
 import Session from "./socket";
 import { Socket } from "socket.io";
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 const http = new Server(app);
 
