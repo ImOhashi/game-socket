@@ -11,10 +11,20 @@ const port = process.env.PORT || 3001;
 const http = new Server(app);
 
 const io = new socket.Server(http);
-const players_num = (room : string): number =>{
-    return io.of(`/`).adapter.rooms.get(room).size
-}
-http.listen(port, () => logger.info(`Server running on port: ${port}`));
-io.on("connection",  (socket: Socket) => {
-    Session.init(socket, players_num);
+
+io.use((socket, next) => {
+    const { session, player_id } = socket.request.headers;
+    const room = session.toString();
+    const players = io.of(`/`).adapter.rooms.get(room)
+    if (players && players.size > 1) {
+        logger.info(`Player ${player_id} refused`)
+        next(new Error("Refused"));
+        return
+    } 
+    logger.info(`Player ${player_id} connected`)
+    next();
+    socket.join(room);
 });
+
+http.listen(port, () => logger.info(`Server running on port: ${port}`));
+io.on("connection",  Session.init);
