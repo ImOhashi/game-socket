@@ -18,14 +18,14 @@ io.use((socket, next) => {
   const players = io.of(`/`).adapter.rooms.get(room);
 
   if (players && players.size > 1) {
-    logger.info(`Player ${player_id} refused`);
+    logger.info(`New player refused`);
 
     next(new Error("Refused"));
 
     return;
   }
 
-  logger.info(`Player ${player_id} connected`);
+  logger.info(`Player connected`);
 
   socket.join(room);
   next();
